@@ -72,7 +72,7 @@ Nós vamos avaliar seu conhecimento em algoritmos, C#, orientação a objetos, p
 
 ---
 
-## Refatoração
+## Resolvendo o Desafio
 
 Os principais pontos da refatoração:
 - Dividindo as responsabilidades em classes.
@@ -84,10 +84,13 @@ Os principais pontos da refatoração:
 - Trocando a recursividade pelo loop de recepção na formação do código.
 - Checagem se a letra já existe no código com o Contains no lugar de um loop de recepção.
 - Implementação de testes de unidade.
+- Alteração nas rotinas para não permitir que os códigos se repitam dentro do mesmo arquivo.
+    - Isso influencia significativamente na performance, assima de 100.000 códigos passa a ser inviável.
+    - Este recurso pode ser ligado ou desligado em TreasuryChallengeNew.Lib.Runner.CanRepeatLine
 - As mudanças estão aplicadas no projeto TreasuryChallengeNew.
 
 
-### Resultado pós refatoração
+### Resultados pós refatoração
 
 |  Linhas    | Tempo      |
 | ---------- | ---------- |
@@ -98,3 +101,9 @@ Os principais pontos da refatoração:
 | 100.000    | 1.311 ms   |
 | 1.000.000  | 16.350 ms  |
 | 10.000.000 | 206.978 ms |
+
+## Como Rodar
+
+Basta rodar o comando `dotnet run` dentro da pasta TreasuryChallengeNew onde se encontra o TreasuryChallengeNew.csproj, e informar a quantidade de linhas.
+
+<br>
